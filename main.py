@@ -163,7 +163,7 @@ def main():
                           
                 ╚═══════════════════════════════════════════════╝
                 '''))
-                os.system(f'node tlsvip.js {host} {time} 64 1000 proxy.txt')
+                os.system(f'node TLSVIP {host} {time} 64 1000 proxy.txt')
             except IndexError:
                 print(Colorate.Diagonal(Colors.yellow_to_red, 'Usage: METHOD URL PORT TIME'));
                 print(Colorate.Diagonal(Colors.yellow_to_red, 'Example: METHOD URL PORT TIME'));

